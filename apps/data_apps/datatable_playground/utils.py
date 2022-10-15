@@ -16,7 +16,7 @@ def prepare_query(query: str) -> str:
     return query
 
 
-def create_choices_from_list(values: list) -> list[ui.Choice]:
+def create_choices_from_list(values: list) -> 'list[ui.Choice]':
     """
     Create choices from list of values in Wave's Choice format.
     """
@@ -24,7 +24,7 @@ def create_choices_from_list(values: list) -> list[ui.Choice]:
     return [ui.choice(name=str(value), label=str(value)) for value in values]
 
 
-def create_table_columns(data: dt.Frame) -> list[ui.TableColumn]:
+def create_table_columns(data: dt.Frame) -> 'list[ui.TableColumn]':
     """
     Create columns of data in Wave's TableColumn format.
     """
@@ -34,7 +34,7 @@ def create_table_columns(data: dt.Frame) -> list[ui.TableColumn]:
     ]
 
 
-def create_table_rows(data: dt.Frame) -> list[ui.TableRow]:
+def create_table_rows(data: dt.Frame) -> 'list[ui.TableRow]':
     """
     Create rows of data in Wave's TableRow format.
     """
